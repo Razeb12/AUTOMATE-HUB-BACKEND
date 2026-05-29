@@ -2,14 +2,14 @@ from functools import lru_cache
 from pydantic_settings import BaseSettings
 
 class Settings(BaseSettings):
-    APP_ENV: str = 'development'
-    SECRET_KEY: str = 'change_me_in_production'
-    REDIS_URL: str = 'redis://localhost:6379'
-    WS_PING_INTERVAL: int = 20
-    WS_PING_TIMEOUT: int = 10
-    OBD_POLL_INTERVAL_MS: int = 500
-    CORS_ORIGINS: list[str] = ['*']
-    EXPECTED_API_KEY: str = 'automat_secret_key'
+    APP_ENV: str
+    SECRET_KEY: str
+    REDIS_URL: str
+    WS_PING_INTERVAL: int
+    WS_PING_TIMEOUT: int
+    OBD_POLL_INTERVAL_MS: int
+    CORS_ORIGINS: list[str]
+    EXPECTED_API_KEY: str
 
     class Config:
         env_file = '.env'
