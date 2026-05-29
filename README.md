@@ -52,5 +52,5 @@ src/
 ## Design Philosophy
 
 - **Single Responsibility (SRP)**: Every class, function, and file does exactly one thing. Example: `OBDParser` only parses frames; it does not read from the network or publish to Redis.
-- **Dependency Inversion (DIP)**: High-level use cases depend only on abstractions (`AbstractTelemetryBroker`, `AbstractOBDSource`), making it trivial to swap a real ELM327 interface with our `OBDSimulator`.
+- **Dependency Inversion (DIP)**: High-level use cases depend only on abstractions (`AbstractTelemetryBroker`, `AbstractOBDSource`), making it trivial to swap a real ELM327 interface with my `OBDSimulator`.
 - **Open/Closed (OCP)**: The `PID_REGISTRY` is the single source of truth. Adding a new PID requires modifying only the registry dictionary—no changes to the parser, validator, or frontend.
